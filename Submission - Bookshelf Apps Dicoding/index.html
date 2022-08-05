@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bookshelf Apps</h1>
+            <div class="searchBook">
+                <input id="searchBook" type="text" placeholder="Cari Buku">
+                <button id="searchButton" type="submit">Cari</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inputSection">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input title">
+                    <label for="inputBookTitle">Judul Buku</label>
+                    <input id="inputBookTitle" type="text" name="inputBookTittle" autocomplete="off" required>
+                </div>
+                <div class="input author">
+                    <label for="inputBookAuthor">Nama Penulis</label>
+                    <input id="inputBookAuthor" type="text" name="inputBookAuthor" autocomplete="off" required>
+                </div>
+                <div class="input year">
+                    <label for="inputBookYear">Tahun Penerbitan</label>
+                    <input id="inputBookYear" type="number" name="inputBookYear" required>
+                </div>
+                <div class="inputCheckbox">
+                    <label for="inputReaded">Selesai dibaca</label>
+                    <input id="readed" type="checkbox">
+                </div>
+                <div class="buttonSubmit">
+                    <button id="submit" type="submit">Tambah Buku</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="notReadedList">
+            <h2>Belum Selesai Dibaca</h2>
+            <div id="notReadedList" class="bookList">
+                
+            </div>
+        </section>
+
+        <section class="readedList">
+            <h2>Selesai Dibaca</h2>
+            <div id="readedList" class="bookList">
+
+            </div>
+        </section>
+
+        <section class="editSection" hidden>
+            <div class="editForm">
+                <form id="editBook">
+                    <h3>Edit Book</h3>
+                    <div class="input title">
+                        <label for="editBookTitle">Judul Buku</label>
+                        <input id="editBookTitle" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="input author">
+                        <label for="editBookAuthor">Nama Penulis</label>
+                        <input id="editBookAuthor" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="input year">
+                        <label for="editBookYear">Tahun Penerbitan</label>
+                        <input id="editBookYear" type="number" required>
+                    </div>
+                    <div class="inputCheckbox">
+                        <label for="editReaded">Selesai dibaca</label>
+                        <input id="editReaded" type="checkbox">
+                    </div>
+                    <div class="editButton">
+                        <button id="editSubmit" type="button">Simpan</button>
+                        <button id="editCancel" type="button">Batal</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2022 Bookshelf Apps</p>
+    </footer>
+
+    <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/dom.js"></script>
+    <script src="assets/javascript/data.js"></script>
+
+</body>
+</html>

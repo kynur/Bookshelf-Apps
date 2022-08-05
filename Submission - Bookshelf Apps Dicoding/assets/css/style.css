@@ -1,0 +1,331 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #222831;
+}
+
+header {
+  margin: 0 auto;
+  display: inline;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-size: 16px;
+  background-color: #1c2128;
+}
+
+main {
+  display: flex;
+  margin: 25px 30px;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+}
+
+#searchBook {
+  position: relative;
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  left: 45px;
+  border: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#searchButton {
+  position: relative;
+  left: -3px;
+  height: 25px;
+  width: 45px;
+  border-radius: 0 5px 5px 0;
+  background-color: #347474;
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#searchBook::-webkit-input-placeholder {
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 400px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #393E46;
+}
+
+.inputSection > h2 {
+  text-align: center;
+  color: #EEEEEE;
+}
+
+.inputSection > form > .input {
+  margin: 30px 0;
+}
+
+.inputSection > form > .input > input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(93, 93, 93);
+  border-radius: 5px;
+}
+
+.inputSection > form > .input > label {
+  color: #EEEEEE;
+  font-weight: bold;
+}
+
+.inputSection > form > .bookCompleted > label {
+  color: #EEEEEE;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.inputSection > form > button {
+  background-color: crimson;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.inputCheckbox label {
+  color: white;
+  font-weight: bold;
+}
+
+.notReadedList {
+  width: 30%;
+  height: 400px;
+  margin: 0 15px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #393E46;
+}
+
+.notReadedList h2 {
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.readedList {
+  width: 30%;
+  height: 400px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #393E46;
+}
+
+.readedList h2 {
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#submit {
+  background-color: #347474;
+  color: white;
+  border: none;
+  width: 100%;
+  height: 34px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cardList {
+  width: 100%;
+  background-color: #35495E;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.bookList{
+  max-height: 320px;
+  padding: 0 5px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.bookList::-webkit-scrollbar-track {
+  background-color: #BBE1FA;
+}
+
+.bookList::-webkit-scrollbar {
+  width: 5px;
+  background-color: #BBE1FA;
+}
+
+.bookList::-webkit-scrollbar-thumb {
+  background-color: #222831;
+  margin-top: 10px;
+}
+
+.bookTitle {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.bookDetails {
+  color: rgb(184, 184, 184);
+  margin-bottom: 5px;
+}
+
+.bookDetails span {
+  font-weight: normal;
+}
+
+.editSection {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.76);
+  padding: 0;
+}
+
+.editForm {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+#editBook {
+  position: relative;
+  background-color: #30475E;
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+#editBook h3 {
+  font-size: 23px;
+  text-align: center;
+  padding: 25px;
+  color: white;
+}
+
+.editButton {
+  margin: 10px 0;
+  display: flex;
+  justify-content: end;
+}
+
+#editSubmit {
+  padding: 5px;
+  width: 100px;
+  margin-right: 15px;
+  font-size: 16px;
+  background-color: #346751;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+#editCancel {
+  width: 100px;
+  padding: 5px;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #A10035;
+}
+
+.editForm > form > .input > input {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.editForm > form > .input > label {
+  color: white;
+  font-weight: bold;
+}
+
+.editForm > form > .input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.bookButtons {
+  display: flex;
+  margin-top: 5px;
+  justify-content: end;
+}
+
+.bookButtons button {
+  border: none;
+  min-width: 70px;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonDone {
+  background-color: #346751;
+}
+
+.buttonEdit {
+  background-color: #E6B325;
+}
+
+.buttonDelete {
+  background-color: #A10035;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2128;
+}
